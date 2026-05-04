@@ -101,3 +101,22 @@ docker run --rm -p 8080:8080 helpdesk-api:local
 - `main`: production
 - `develop`: intégration
 - `feature/*`: nouvelles fonctionnalités via Pull Request
+
+### Flux recommandé
+
+1. Créer une branche: `feature/nom-feature` depuis `develop`
+2. Développer + commit
+3. Push vers GitHub
+4. Ouvrir Pull Request vers `develop`
+5. Vérifier pipeline vert
+6. Merge PR
+7. Ouvrir PR `develop -> main` pour release
+
+## Checklist finale avant dépôt examen
+
+- [ ] Lien repo GitHub prêt (accès enseignant si privé)
+- [ ] Dernier pipeline CI/CD vert
+- [ ] Image Docker buildée (et publiée depuis `main`)
+- [ ] README complet
+- [ ] Rapport PDF (10-20 pages) avec captures (pipeline, Docker, architecture, endpoints)
+- [ ] Répartition du travail claire entre binôme
