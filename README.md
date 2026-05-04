@@ -96,6 +96,30 @@ Run:
 docker run --rm -p 8080:8080 helpdesk-api:local
 ```
 
+## Kubernetes (bonus)
+
+Le dossier `k8s/` contient:
+
+- `configmap.yaml`
+- `secret.yaml`
+- `mysql-deployment.yaml`
+- `mysql-service.yaml`
+- `app-deployment.yaml`
+- `app-service.yaml`
+
+Déploiement:
+
+```bash
+kubectl apply -k k8s/
+kubectl get pods,svc
+```
+
+Accès API (Minikube/NodePort):
+
+```bash
+http://<NODE_IP>:30080/swagger-ui/index.html
+```
+
 ## Workflow Git recommandé
 
 - `main`: production
